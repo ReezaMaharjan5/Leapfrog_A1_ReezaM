@@ -65,6 +65,41 @@ Here, sha of each commits can be generated using the command as:
 The reset command is used to permanently erase commits specified with is sha from the commit history. No record of the original commit is found thus, we cannot go back to the version before the reset command was executed even if it is required later. After the reset command, the git commits already in the Git Repository goes back to the Staging Area. The format of reset command is:
 ###
     git reset <file_name>
-#
+##
 
 
+
+##
+### <u>Day-2 Git part-1 of Assignment 2 </u>###
+
+### <u>Additional questions on the second day of Git </u> ###
+###
+
+### Question 6.a. : Write the difference between fetch and pull command.
+##
+Answer 6.a. : The fetch and pull commands are used to update a local repository with changes from a remote repository.
+The fetch command pulls the most recent changes from the remote repository, but it does not immediately merge them into your local branch. To review changes, compare branches, or manually merge them later, it downloads the most recent state of the remote branch and stores it in your local repository.
+###
+The fetch command is the combination of push and merge commands, then if the conflict occurs we have to resolve them before the merge is completed. It fetches the latest changes from the remote repository and immediately attempts to merge them into your current local branch. 
+##
+
+
+### Question 6.b.: How to handle merge conflicts?
+##
+Answer 6.b. : 
+###The merge conflict is the issue that can occur when changes to the same file or lines of code are made in different branches, Git is unable to automatically reconcile those differences. Thus, user to manually resolve the differences and choose which changes leading to a single version that includes all the required modification.
+###
+1. First, run git status command to see which files have conflicts.
+
+2. Open the file(s) that has conflict in my preferred code editor. Look for markers like "<<<<<<< HEAD" and "=======" which indicate where the conflicting changes start and end.
+
+3. Edit the file to resolve the conflicts manually, i.e., decide which version of the code should be kept and delete the other.
+
+4. Save the file(s), and then stage them using git add.
+
+5. After staging the resolved conflicts, run git commit to finalize the merge.
+
+6. If there are still more conflicted files, repeat the above steps until all conflicts are resolved.
+
+7. Push the changes to the remote repository using git push.
+##
